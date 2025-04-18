@@ -1,0 +1,468 @@
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   ImóveisJá
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a class="flex items-center space-x-2 text-blue-700 font-semibold text-lg" href="#">
+     <i class="fas fa-home text-xl">
+     </i>
+     <span>
+      ImóveisJá
+     </span>
+    </a>
+    <ul class="hidden md:flex space-x-6 text-sm text-gray-700">
+     <li>
+      <a class="hover:underline" href="#">
+       Início
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       Comprar
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       Alugar
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       Vender
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       Contato
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <section>
+    <h1 class="font-semibold text-gray-900 text-lg sm:text-xl md:text-2xl mb-1">
+     Encontre seu imóvel ideal
+    </h1>
+    <p class="text-gray-500 text-xs sm:text-sm mb-6">
+     Explore nossa seleção de imóveis à venda em Campinas e região
+    </p>
+    <form aria-label="Filtrar Imóveis" class="bg-white rounded-md p-4 mb-8 border border-gray-200 max-w-full">
+     <h2 class="font-semibold text-gray-900 text-sm mb-3">
+      Filtrar Imóveis
+     </h2>
+     <div class="mb-3">
+      <label class="sr-only" for="search">
+       Buscar por localização
+      </label>
+      <div class="relative text-gray-400 focus-within:text-gray-600">
+       <input class="block w-full border border-gray-300 rounded-md py-2 pl-9 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="search" name="search" placeholder="Buscar por localização..." type="search"/>
+       <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
+        <i class="fas fa-search">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      <div>
+       <label class="block text-xs text-gray-600 mb-1" for="minPrice">
+        Preço mínimo (R$)
+       </label>
+       <input class="block w-full border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="minPrice" name="minPrice" type="number" value="0"/>
+      </div>
+      <div>
+       <label class="block text-xs text-gray-600 mb-1" for="maxPrice">
+        Preço máximo (R$)
+       </label>
+       <input class="block w-full border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="maxPrice" name="maxPrice" type="number" value="1000000"/>
+      </div>
+      <div>
+       <label class="block text-xs text-gray-600 mb-1" for="bedrooms">
+        Quartos
+       </label>
+       <select class="block w-full border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="bedrooms" name="bedrooms">
+        <option>
+         Qualquer
+        </option>
+        <option>
+         1
+        </option>
+        <option>
+         2
+        </option>
+        <option>
+         3
+        </option>
+        <option>
+         4+
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block text-xs text-gray-600 mb-1" for="bathrooms">
+        Banheiros
+       </label>
+       <select class="block w-full border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="bathrooms" name="bathrooms">
+        <option>
+         Qualquer
+        </option>
+        <option>
+         1
+        </option>
+        <option>
+         2
+        </option>
+        <option>
+         3
+        </option>
+        <option>
+         4+
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block text-xs text-gray-600 mb-1" for="minArea">
+        Área mínima (m²)
+       </label>
+       <input class="block w-full border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="minArea" name="minArea" type="number" value="0"/>
+      </div>
+     </div>
+     <button class="w-full bg-blue-700 text-white text-xs sm:text-sm rounded-md py-2 hover:bg-blue-800 transition" type="submit">
+      Aplicar Filtros
+     </button>
+    </form>
+   </section>
+   <section>
+    <div class="flex justify-between items-center mb-3">
+     <h2 class="font-semibold text-gray-900 text-sm sm:text-base">
+      4 imóveis encontrados
+     </h2>
+     <div class="text-xs text-gray-600 flex items-center space-x-2">
+      <label class="select-none" for="sort">
+       Ordenar por:
+      </label>
+      <select class="border border-gray-300 rounded-md py-1 px-2 text-xs focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" id="sort" name="sort">
+       <option>
+        Relevância
+       </option>
+       <option>
+        Preço
+       </option>
+       <option>
+        Área
+       </option>
+      </select>
+     </div>
+    </div>
+    <ul aria-label="Lista de imóveis encontrados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <li class="bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+      <div class="relative">
+       <img alt="Casa moderna branca com varanda e janelas grandes em dia claro" class="w-full h-40 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5299e2f7-ed12-4d0d-0591-bd13467cbe13.jpg" width="600"/>
+       <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded-sm font-semibold">
+        R$ 300.000,00
+       </span>
+      </div>
+      <div class="p-3 flex flex-col flex-grow">
+       <strong class="text-gray-900 text-sm mb-1">
+        Rua Francisco Glicerio, 1568
+       </strong>
+       <p class="text-gray-500 text-xs mb-2">
+        Centro - Campinas - SP
+       </p>
+       <div class="flex justify-between text-gray-500 text-xs mb-3">
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bed">
+         </i>
+         <span>
+          0
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bath">
+         </i>
+         <span>
+          1
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-home">
+         </i>
+         <span>
+          70 m²
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-expand-arrows-alt">
+         </i>
+         <span>
+          100 m²
+         </span>
+        </div>
+       </div>
+       <button class="mt-auto bg-blue-700 text-white text-xs rounded-md py-2 hover:bg-blue-800 transition" type="button">
+        Ver detalhes
+       </button>
+      </div>
+     </li>
+     <li class="bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+      <div class="relative">
+       <img alt="Casa grande com teto azul e janelas amarelas ao pôr do sol" class="w-full h-40 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9a336733-2d15-40ef-edaa-4af53ce9c5ad.jpg" width="600"/>
+       <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded-sm font-semibold">
+        R$ 450.000,00
+       </span>
+      </div>
+      <div class="p-3 flex flex-col flex-grow">
+       <strong class="text-gray-900 text-sm mb-1">
+        Avenida Brasil, 789
+       </strong>
+       <p class="text-gray-500 text-xs mb-2">
+        Jardim Europa - Campinas - SP
+       </p>
+       <div class="flex justify-between text-gray-500 text-xs mb-3">
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bed">
+         </i>
+         <span>
+          2
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bath">
+         </i>
+         <span>
+          1
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-home">
+         </i>
+         <span>
+          85 m²
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-expand-arrows-alt">
+         </i>
+         <span>
+          120 m²
+         </span>
+        </div>
+       </div>
+       <button class="mt-auto bg-blue-700 text-white text-xs rounded-md py-2 hover:bg-blue-800 transition" type="button">
+        Ver detalhes
+       </button>
+      </div>
+     </li>
+     <li class="bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+      <div class="relative">
+       <img alt="Casa com teto marrom e garagem grande ao entardecer" class="w-full h-40 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f1bbb19e-5801-4fe2-91ea-ac9dadfc4d6f.jpg" width="600"/>
+       <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded-sm font-semibold">
+        R$ 550.000,00
+       </span>
+      </div>
+      <div class="p-3 flex flex-col flex-grow">
+       <strong class="text-gray-900 text-sm mb-1">
+        Rua das Palmeiras, 456
+       </strong>
+       <p class="text-gray-500 text-xs mb-2">
+        Cambuí - Campinas - SP
+       </p>
+       <div class="flex justify-between text-gray-500 text-xs mb-3">
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bed">
+         </i>
+         <span>
+          3
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bath">
+         </i>
+         <span>
+          2
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-home">
+         </i>
+         <span>
+          110 m²
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-expand-arrows-alt">
+         </i>
+         <span>
+          150 m²
+         </span>
+        </div>
+       </div>
+       <button class="mt-auto bg-blue-700 text-white text-xs rounded-md py-2 hover:bg-blue-800 transition" type="button">
+        Ver detalhes
+       </button>
+      </div>
+     </li>
+     <li class="bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden flex flex-col max-w-xs">
+      <div class="relative">
+       <img alt="Casa pequena branca com portão de madeira e árvores ao redor no outono" class="w-full h-40 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/10093ff2-31c9-40a8-6dd8-3e71e04307df.jpg" width="600"/>
+       <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded-sm font-semibold">
+        R$ 280.000,00
+       </span>
+      </div>
+      <div class="p-3 flex flex-col flex-grow">
+       <strong class="text-gray-900 text-sm mb-1">
+        Rua dos Andradas, 234
+       </strong>
+       <p class="text-gray-500 text-xs mb-2">
+        Botafogo - Campinas - SP
+       </p>
+       <div class="flex justify-between text-gray-500 text-xs mb-3">
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bed">
+         </i>
+         <span>
+          1
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-bath">
+         </i>
+         <span>
+          1
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-home">
+         </i>
+         <span>
+          60 m²
+         </span>
+        </div>
+        <div class="flex items-center space-x-1">
+         <i class="fas fa-expand-arrows-alt">
+         </i>
+         <span>
+          80 m²
+         </span>
+        </div>
+       </div>
+       <button class="mt-auto bg-blue-700 text-white text-xs rounded-md py-2 hover:bg-blue-800 transition" type="button">
+        Ver detalhes
+       </button>
+      </div>
+     </li>
+    </ul>
+   </section>
+  </main>
+  <footer class="bg-blue-800 text-blue-100">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div class="space-y-3">
+     <div class="flex items-center space-x-2 font-semibold text-sm">
+      <i class="fas fa-home">
+      </i>
+      <span>
+       ImóveisJá
+      </span>
+     </div>
+     <p class="text-xs max-w-xs">
+      Encontre seu imóvel dos sonhos com a melhor experiência de compra.
+     </p>
+     <div class="flex space-x-4 text-blue-100 text-sm">
+      <a aria-label="Facebook" class="hover:text-white" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-white" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-white" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div class="space-y-3 text-xs">
+     <h3 class="font-semibold">
+      Links Rápidos
+     </h3>
+     <ul class="space-y-1">
+      <li>
+       <a class="hover:underline" href="#">
+        Início
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Comprar
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Alugar
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Vender
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Sobre nós
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="space-y-3 text-xs">
+     <h3 class="font-semibold">
+      Contato
+     </h3>
+     <ul class="space-y-1">
+      <li class="flex items-center space-x-2 text-blue-200">
+       <i class="fas fa-phone-alt">
+       </i>
+       <span>
+        (19) 3333-4444
+       </span>
+      </li>
+      <li class="flex items-center space-x-2 text-blue-200">
+       <i class="fas fa-envelope">
+       </i>
+       <a class="hover:underline" href="mailto:contato@imoveisja.com.br">
+        contato@imoveisja.com.br
+       </a>
+      </li>
+      <li class="flex items-center space-x-2 text-blue-200">
+       <i class="fas fa-map-marker-alt">
+       </i>
+       <address class="not-italic">
+        Av. Francisco Glicerio, 1765
+        <br/>
+        Centro, Campinas - SP
+       </address>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="border-t border-blue-700 text-center text-blue-200 text-xs py-3 select-none">
+    © 2025 ImóveisJá. Todos os direitos reservados.
+   </div>
+  </footer>
+ </body>
+</html>
